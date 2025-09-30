@@ -1,13 +1,13 @@
-import React from "react";
-import cx from "classnames";
-
+import React from 'react'
+import cx from 'classnames'
+import {twMerge} from 'tailwind-merge'
 // props = {
-//    children: "whtever elements between the open close tag"
-//    primary: true,
+//   children: 'whatever elements or text inside the open close tags',
+// primary: true,
 // }
 
 const Button = (props) => {
-  // detructuring out props object so don't have to type "props" everytime
+  // destructuring our props object
   const {
     children,
     primary,
@@ -17,41 +17,36 @@ const Button = (props) => {
     danger,
     rounded,
     outline,
-    //...means unpacking something
-    ...otherProps //includes all others
-  } = props;
-  // the line above does this with less typing
+    ...otherProps
+  } = props
+  // the line above does this but with less typing
   // const children = props.children
 
-  const classes = cx(
-    "flex items-center px-8 py-3 border",
-    otherProps.className,
-    {
-      "bg-blue-500 border-blue-500 text-white": primary,
-      "bg-gray-700 border-gray-700 text-white": secondary,
-      "bg-green-500 border-green-500 text-white": success,
-      "bg-orange-400 border-orange-400 text-white": warning,
-      "bg-red-600 border-red-600 text-white": danger,
+  const classes = twMerge(
+    cx('flex items-center px-8 py-3 border', otherProps.className, {
+      'bg-blue-500 border-blue-500 text-white': primary,
+      'bg-gray-900 border-gray-900 text-white': secondary,
+      'bg-green-500 border-green-500 text-white': success,
+      'bg-orange-400 border-orange-400 text-white': warning,
+      'bg-red-600 border-red-600 text-white': danger,
       //rounded
-      "rounded-full": rounded,
+      'rounded-full': rounded,
       //outline
-      "bg-white": outline,
-      //outline variation in text color
-      "text-blue-500": outline && primary,
-      "text-gray-700": outline && secondary,
-      "text-green-500": outline && success,
-      "text-orange-400": outline && warning,
-      "text-red-600": outline && danger,
-    }
-  );
-  // base class
+      'bg-white': outline,
+      // outline variation in text color
+      'text-blue-500': outline && primary,
+      'text-gray-900': outline && secondary,
+      'text-green-500': outline && success,
+      'text-orange-400': outline && warning,
+      'text-red-600': outline && danger,
+    })
+  )
 
   return (
     <button {...otherProps} className={classes}>
       {children}
     </button>
-  );
-  // for whatever comes inside the opening and closing tab
-};
+  )
+}
 
-export default Button;
+export default Button

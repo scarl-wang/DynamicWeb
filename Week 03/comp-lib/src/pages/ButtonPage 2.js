@@ -1,18 +1,14 @@
+//a page is technically a component but acts like a wrapper for everything
+
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/Button"; //two dots means going up a level
 
 const ButtonPage = () => {
   return (
     <div>
-      <h1>Button Page</h1>
+      <h1>ButtonPage</h1>
       <div>
-        <Button
-          primary
-          outline
-          onClick={() => {
-            console.log("CLICK");
-          }}
-        >
+        <Button primary outline onClick={() => console.log("CLICK")}>
           Primary
         </Button>
       </div>
@@ -37,6 +33,7 @@ const ButtonPage = () => {
         </Button>
       </div>
     </div>
+    //always wrap sister elements in one
   );
 };
 

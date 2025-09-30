@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "../components/Button";
+import React from 'react'
+import Button from '../components/Button'
 
 const ButtonPage = () => {
   return (
@@ -10,7 +10,7 @@ const ButtonPage = () => {
           primary
           outline
           onClick={() => {
-            console.log("CLICK");
+            console.log('CLICK')
           }}
         >
           Primary
@@ -18,7 +18,11 @@ const ButtonPage = () => {
       </div>
 
       <div>
-        <Button secondary rounded className="fixed top-0 right-0">
+        <Button
+          secondary
+          rounded
+          className="fixed top-0 right-0"
+        >
           Secondary
         </Button>
       </div>
@@ -32,12 +36,16 @@ const ButtonPage = () => {
       </div>
 
       <div>
-        <Button danger outline rounded>
+        <Button
+          danger
+          outline
+          rounded
+        >
           Danger
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ButtonPage;
+export default ButtonPage
