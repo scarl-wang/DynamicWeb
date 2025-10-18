@@ -13,7 +13,7 @@ const SearchPage = () => {
   };
 
   return (
-    <div>
+    <div className="p-8">
       <SearchBar onSubmit={handleSubmit} />
       <ImageList images={images} />
     </div>

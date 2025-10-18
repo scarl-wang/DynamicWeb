@@ -4,8 +4,11 @@ const ImageItem = (props) => {
   const { image } = props;
   return (
     <div>
-      <img src={image.urls.small} alt={image.alt_description} />
-      <p>{image.alt_description}</p>
+      <img
+        className="w-64 h-64 object-cover rounded-lg"
+        src={image.urls.small}
+        alt={image.alt_description}
+      />
     </div>
   );
 };

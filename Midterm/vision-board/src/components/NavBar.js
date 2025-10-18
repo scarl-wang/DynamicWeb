@@ -1,19 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import cx from "classnames";
 
-const Panel = (props) => {
-  const { className, children, ...rest } = props;
-  const finalClassNames = cx(
-    className,
-    "border rounded p-3 shadow bg-white w-full"
-  );
-  return (
-    <div {...rest} className={finalClassNames}>
-      {children}
-    </div>
-  );
-};
-
 const Navbar = () => {
   /*
     V6+ of React Router changed the way NavLinks work. You used to have access to a var you didn't make called IsActive
@@ -22,12 +9,12 @@ const Navbar = () => {
     */
 
   //define our base class & our active class as js ver
-  const baseClass = "text-blue-500";
+  const baseClass = "py-2 px-2 text-slate-400 w-24";
   const activeClass =
-    "text-blue-500 border-l-4 border-blue-500 font-bold decoration-solid pl-1";
+    "py-2 px-2 text-white bg-black drop-shadow-md rounded-full w-24 content-center";
 
   return (
-    <Panel className="sticky top-0 overflow-y-scroll flex flex-col item-start">
+    <div className="sticky border bg-white text-center p-4 top-0 flex flex-row items-center justify-center">
       <NavLink
         to="/"
         className={({ isActive }) =>
@@ -49,7 +36,7 @@ const Navbar = () => {
       >
         Favorites
       </NavLink>
-    </Panel>
+    </div>
   );
 };
 

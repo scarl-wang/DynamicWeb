@@ -7,7 +7,7 @@ const ImageList = (props) => {
   const { images } = props;
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center m-4 gap-4">
       {images.map((img) => (
         <ImageItem key={img.id} image={img} />
       ))}
