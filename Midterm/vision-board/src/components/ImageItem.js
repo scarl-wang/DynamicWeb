@@ -1,14 +1,24 @@
 import React from "react";
+import Favorite from "./Favorite";
 
 const ImageItem = (props) => {
-  const { image } = props;
+  const { image, toggleFav, isInFavs } = props;
+  const showFavButton = toggleFav && isInFavs;
+
   return (
-    <div>
+    <div className="relative">
+      {/* image */}
       <img
-        className="w-64 h-64 object-cover rounded-lg"
+        className="w-64 h-80 object-cover rounded-lg"
         src={image.urls.small}
         alt={image.alt_description}
       />
+      {/* heart button (only show for search page) */}
+      {showFavButton && (
+        <div className="absolute top-2 right-2 ">
+          <Favorite image={image} toggleFav={toggleFav} isInFavs={isInFavs} />
+        </div>
+      )}
     </div>
   );
 };

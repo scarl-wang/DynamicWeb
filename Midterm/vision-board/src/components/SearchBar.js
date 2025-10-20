@@ -15,7 +15,7 @@ const SearchBar = (props) => {
   };
   return (
     <div>
-      {/* By wrapping our inputs in a form tag, we get default browser behavior
+      {/* Wrapping inputs in a form tag to get default browser behavior
     // this means on Submit is exposed to both a submit button click
     // Or the user hitting the enter key*/}
       <form
@@ -31,7 +31,7 @@ const SearchBar = (props) => {
         />
         <button
           type="submit"
-          className="px-4 py-2 text-sm min-w-20 max-w-24 justify-self-end bg-black text-white rounded-full hover:bg-slate-600"
+          className="px-4 py-2 text-sm min-w-20 max-w-24 justify-self-end bg-black text-white rounded-full hover:bg-rose-600"
         >
           Search
         </button>

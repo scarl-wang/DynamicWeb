@@ -1,15 +1,18 @@
 import React from "react";
 import ImageItem from "./ImageItem";
 
-// this is only responsible for the mapping logic
+// mapping logic
 
-const ImageList = (props) => {
-  const { images } = props;
-
+const ImageList = ({ images, toggleFav, isInFavs }) => {
   return (
-    <div className="flex flex-col justify-center items-center m-4 gap-4">
+    <div className="grid grid-cols-3 gap-4 justify-center items-center m-2 gap-4">
       {images.map((img) => (
-        <ImageItem key={img.id} image={img} />
+        <ImageItem
+          key={img.id}
+          image={img}
+          toggleFav={toggleFav}
+          isInFavs={isInFavs}
+        />
       ))}
     </div>
   );
