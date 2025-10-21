@@ -16,7 +16,6 @@ const searchImages = async (term) => {
   // don't move on until we get an response from the server
   // have to add "async" at top level
 
-  //console.log(response.data.results);
   return response.data.results;
 };
 

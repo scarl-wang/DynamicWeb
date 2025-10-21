@@ -3,7 +3,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 // creating a favorite button that tracks user's liked photos
 
-const Favorite = ({ image, toggleFav, isInFavs }) => {
+const FavButton = ({ image, toggleFav, isInFavs }) => {
   // these functions are in App.js
   // check if the image is in favs
   const isFaved = isInFavs(image.id);
@@ -27,4 +27,4 @@ const Favorite = ({ image, toggleFav, isInFavs }) => {
   );
 };
 
-export default Favorite;
+export default FavButton;

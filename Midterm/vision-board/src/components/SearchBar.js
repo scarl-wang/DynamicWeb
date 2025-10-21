@@ -17,9 +17,7 @@ const SearchBar = (props) => {
   };
   return (
     <div>
-      {/* Wrapping inputs in a form tag to get default browser behavior
-    // this means on Submit is exposed to both a submit button click
-    // Or the user hitting the enter key*/}
+      {/* Form tags allow default browser behavior like submit button click & hitting enter key */}
       <form
         className="flex items-center gap-3 bg-slate-200 py-2 px-4 mb-4 rounded-full"
         onSubmit={handleFormSubmit}
@@ -29,7 +27,7 @@ const SearchBar = (props) => {
           <input
             className="flex-1 bg-transparent outline-none text-sm placeholder-slate-500"
             type="text"
-            placeholder="Search for images..."
+            placeholder="Search"
             onChange={handleChange}
             value={term}
           />

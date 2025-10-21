@@ -8,6 +8,10 @@ function App() {
   // create an array to store faved images
   const [favs, setFavs] = useState([]);
 
+  // create a state for search results
+  // have to move it here so it persists across tab switch
+  const [searchResults, setSearchResults] = useState([]);
+
   // function to add/remove images
   const toggleFav = (image) => {
     // check if image is in favs
@@ -32,13 +36,20 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col  mx-4">
+    <div className="flex flex-col mx-4">
       <Navbar />
       <div>
         <Routes>
           <Route
             path="/"
-            element={<SearchPage toggleFav={toggleFav} isInFavs={isInFavs} />}
+            element={
+              <SearchPage
+                toggleFav={toggleFav}
+                isInFavs={isInFavs}
+                searchResults={searchResults}
+                setSearchResults={setSearchResults}
+              />
+            }
           ></Route>
           <Route
             path="/favorites"

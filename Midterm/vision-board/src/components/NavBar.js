@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import cx from "classnames";
 
 const Navbar = () => {
   //defing base class and active class
@@ -15,7 +14,6 @@ const Navbar = () => {
         className={({ isActive }) =>
           // isActive is a prop we get for free from NavLink
           //({isActive}) => {} is like  (props) => {const {isActive}} =
-
           isActive ? activeClass : baseClass
         }
       >
@@ -26,7 +24,7 @@ const Navbar = () => {
         to="/favorites"
         className={({ isActive }) => (isActive ? activeClass : baseClass)}
       >
-        Favorites
+        My Board
       </NavLink>
     </div>
   );

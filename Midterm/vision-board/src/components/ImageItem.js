@@ -1,5 +1,6 @@
 import React from "react";
-import Favorite from "./Favorite";
+import Favorite from "./FavButton";
+import FavButton from "./FavButton";
 
 const ImageItem = (props) => {
   const { image, toggleFav, isInFavs } = props;
@@ -18,7 +19,7 @@ const ImageItem = (props) => {
       {/* heart button (only show for search page) */}
       {showFavButton && (
         <div className="absolute top-2 right-2 ">
-          <Favorite image={image} toggleFav={toggleFav} isInFavs={isInFavs} />
+          <FavButton image={image} toggleFav={toggleFav} isInFavs={isInFavs} />
         </div>
       )}
     </div>
