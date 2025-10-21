@@ -12,27 +12,26 @@ function App() {
   // have to move it here so it persists across tab switch
   const [searchResults, setSearchResults] = useState([]);
 
+  // checks if image is in the array
+  // https://www.w3schools.com/jsref/jsref_some.asp
+  // returns boolean
+  const isInFavs = (imageId) => {
+    return favs.some((item) => item.id === imageId);
+  };
+
   // function to add/remove images
   const toggleFav = (image) => {
     // check if image is in favs
-    // https://www.w3schools.com/jsref/jsref_some.asp
-    const isFaved = favs.some((item) => item.id === image.id);
-    // returns boolean
 
-    if (isFaved) {
+    if (isInFavs(image.id)) {
       // keep everything except the image unfavorited
       const newFavs = favs.filter((item) => item.id !== image.id);
       setFavs(newFavs);
     } else {
       // copy all old items and add new image
-      const newFavs = [...favs, image];
+      const newFavs = [image, ...favs];
       setFavs(newFavs);
     }
-  };
-
-  // checks if image is in the array
-  const isInFavs = (imageId) => {
-    return favs.some((item) => item.id === imageId);
   };
 
   return (
