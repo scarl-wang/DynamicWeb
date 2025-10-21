@@ -13,7 +13,7 @@ const ImageItem = (props) => {
       {/* image */}
       <img
         className="w-full h-80 object-cover rounded-lg"
-        src={image.urls.small}
+        src={image.urls.regular}
         alt={image.alt_description}
       />
       {/* heart button (only show for search page) */}
