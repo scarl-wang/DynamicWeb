@@ -7,8 +7,9 @@ const Navbar = () => {
   const activeClass =
     "py-2 px-2 text-white bg-black drop-shadow-md rounded-full w-24 content-center";
 
+  // z-index controlls stack order https://v3.tailwindcss.com/docs/z-index
   return (
-    <div className="sticky border bg-white text-center p-4 top-0 flex flex-row items-center justify-center">
+    <div className="sticky bg-white text-center p-4 top-0 flex flex-row items-center justify-center z-10">
       <NavLink
         to="/"
         className={({ isActive }) =>

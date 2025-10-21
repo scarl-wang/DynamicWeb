@@ -14,6 +14,7 @@ const SearchPage = ({ toggleFav, isInFavs }) => {
   // passing props down
   return (
     <div className="p-8">
+      <h1 className="text-3xl font-bold mb-4 p-2">Build Your Vision Board</h1>
       <SearchBar onSubmit={handleSubmit} />
       <ImageList images={images} toggleFav={toggleFav} isInFavs={isInFavs} />
     </div>

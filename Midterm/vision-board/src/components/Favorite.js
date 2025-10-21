@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
+// creating a favorite button that tracks user's liked photos
+
 const Favorite = ({ image, toggleFav, isInFavs }) => {
   // these functions are in App.js
   // check if the image is in favs

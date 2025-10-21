@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import Button from "./Button";
 
 const SearchBar = (props) => {
   const { onSubmit } = props; // be consistent with the name
@@ -19,22 +21,21 @@ const SearchBar = (props) => {
     // this means on Submit is exposed to both a submit button click
     // Or the user hitting the enter key*/}
       <form
-        className="grid grid-cols-3 justify-items-stretch bg-slate-200 py-2 pl-1 pr-2 rounded-full"
+        className="flex items-center gap-3 bg-slate-200 py-2 px-4 mb-4 rounded-full"
         onSubmit={handleFormSubmit}
       >
-        <input
-          className="text-xs col-span-2 bg-slate-200 rounded-full px-2"
-          type="text"
-          placeholder="Search for images..."
-          onChange={handleChange}
-          value={term}
-        />
-        <button
-          type="submit"
-          className="px-4 py-2 text-sm min-w-20 max-w-24 justify-self-end bg-black text-white rounded-full hover:bg-rose-600"
-        >
-          Search
-        </button>
+        <div className="flex items-center gap-2 flex-1">
+          <FaSearch classname="text-slate-500" />
+          <input
+            className="flex-1 bg-transparent outline-none text-sm placeholder-slate-500"
+            type="text"
+            placeholder="Search for images..."
+            onChange={handleChange}
+            value={term}
+          />
+        </div>
+
+        <Button text="Search" type="submit" />
       </form>
     </div>
   );

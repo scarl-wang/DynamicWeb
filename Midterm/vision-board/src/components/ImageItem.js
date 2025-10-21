@@ -5,11 +5,13 @@ const ImageItem = (props) => {
   const { image, toggleFav, isInFavs } = props;
   const showFavButton = toggleFav && isInFavs;
 
+  // individual image hearts with heart button on top right
+
   return (
     <div className="relative">
       {/* image */}
       <img
-        className="w-64 h-80 object-cover rounded-lg"
+        className="w-full h-80 object-cover rounded-lg"
         src={image.urls.small}
         alt={image.alt_description}
       />
