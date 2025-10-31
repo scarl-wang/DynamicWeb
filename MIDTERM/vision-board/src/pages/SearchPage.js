@@ -5,8 +5,7 @@ import { useContext } from "react";
 import { VisionBoardContext } from "../VisionBoardContext";
 
 const SearchPage = () => {
-  const { searchResults, setSearchResults, toggleFav, isInFavs } =
-    useContext(VisionBoardContext);
+  const { searchResults, setSearchResults } = useContext(VisionBoardContext);
   const handleSubmit = async (term) => {
     const result = await searchImages(term);
     setSearchResults(result);
@@ -14,13 +13,22 @@ const SearchPage = () => {
 
   return (
     <div className="p-6 h-screen bg-slate-100 rounded-lg">
-      <h1 className="text-3xl font-bold mb-4 p-2">Build Your Vision Board</h1>
       <SearchBar onSubmit={handleSubmit} />
-      <ImageList
-        images={searchResults}
-        toggleFav={toggleFav}
-        isInFavs={isInFavs}
-      />
+
+      {/* show placeholder when no search terms have been entered */}
+      {searchResults.length === 0 ? (
+        <div className="flex flex-col items-center justify-center mt-20 text-center">
+          <h2 className="text-2xl font-semibold text-gray-600 mb-2">
+            Build your vision board
+          </h2>
+          <p className="text-gray-500 max-w-md">
+            Search for images that inspire you
+          </p>
+        </div>
+      ) : (
+        /* otherwise, show search results */
+        <ImageList images={searchResults} />
+      )}
     </div>
   );
 };

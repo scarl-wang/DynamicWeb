@@ -1,8 +1,8 @@
-import ImageList from "../components/ImageList";
+import DraggableImageList from "../components/DraggableImageList";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { useVisionBoard, VisionBoardContext } from "../VisionBoardContext";
+import { VisionBoardContext } from "../VisionBoardContext";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
@@ -27,7 +27,7 @@ const FavoritesPage = () => {
         ) : null}
 
         {/* display favorited images in a list */}
-        <ImageList
+        <DraggableImageList
           images={favs}
           moveImage={moveImage}
           toggleFav={toggleFav}

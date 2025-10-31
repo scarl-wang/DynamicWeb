@@ -1,8 +1,7 @@
 import { createContext, useState, useContext } from "react";
 
-// useContext() allows you data sharing cross the component tree
+// useContext() allows data sharing cross the component tree
 // https://react.dev/learn/passing-data-deeply-with-context
-//
 
 export const VisionBoardContext = createContext();
 // creates an empty "container" to hold shared data
@@ -62,6 +61,7 @@ export const VisionBoardProvider = ({ children }) => {
     setSearchResults,
     isInFavs,
     toggleFav,
+    moveImage,
   };
 
   return (

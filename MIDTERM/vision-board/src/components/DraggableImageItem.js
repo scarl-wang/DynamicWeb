@@ -1,14 +1,13 @@
 import { useContext } from "react";
 import { useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
-import Favorite from "./FavButton";
 import FavButton from "./FavButton";
 import { VisionBoardContext } from "../VisionBoardContext";
 
 // define type of item to be dragged
 const ItemType = "IMAGE";
 
-const ImageItem = (props) => {
+const DraggableImageItem = (props) => {
   const { image, index } = props;
   const { toggleFav, isInFavs, moveImage } = useContext(VisionBoardContext);
   const showFavButton = toggleFav && isInFavs;
@@ -78,4 +77,4 @@ const ImageItem = (props) => {
   );
 };
 
-export default ImageItem;
+export default DraggableImageItem;

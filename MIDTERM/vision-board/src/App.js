@@ -1,5 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import Navbar from "./components/NavBar";
