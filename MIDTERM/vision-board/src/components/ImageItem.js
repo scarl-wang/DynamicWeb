@@ -1,15 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import Favorite from "./FavButton";
 import FavButton from "./FavButton";
+import { VisionBoardContext } from "../VisionBoardContext";
 
 const ImageItem = (props) => {
-  const { image, toggleFav, isInFavs } = props;
+  const { image, index } = props;
+  const { toggleFav, isInFavs } = useContext(VisionBoardContext);
   const showFavButton = toggleFav && isInFavs;
 
-  // individual image hearts with heart button on top right
-
+  // return individual image hearts with heart button on top right
   return (
-    <div className="relative">
+    <div className={"relative"} style={{ cursor: "move" }}>
       {/* image */}
       <img
         className="w-full h-80 object-cover rounded-lg"

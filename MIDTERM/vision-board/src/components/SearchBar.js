@@ -13,6 +13,11 @@ const SearchBar = (props) => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // form submission refresh page and clear inputs
+
+    // Prevent empty searches - this fixes the 400 error!
+    if (term.trim() === "") {
+      return;
+    }
     onSubmit(term);
   };
   return (

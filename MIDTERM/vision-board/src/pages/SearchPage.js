@@ -1,14 +1,12 @@
 import SearchBar from "../components/SearchBar";
 import ImageList from "../components/ImageList";
 import searchImages from "../api";
-import { useState } from "react";
+import { useContext } from "react";
+import { VisionBoardContext } from "../VisionBoardContext";
 
-const SearchPage = ({
-  toggleFav,
-  isInFavs,
-  searchResults,
-  setSearchResults,
-}) => {
+const SearchPage = () => {
+  const { searchResults, setSearchResults, toggleFav, isInFavs } =
+    useContext(VisionBoardContext);
   const handleSubmit = async (term) => {
     const result = await searchImages(term);
     setSearchResults(result);
