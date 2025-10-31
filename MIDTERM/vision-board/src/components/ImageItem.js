@@ -10,7 +10,7 @@ const ImageItem = (props) => {
 
   // return individual image hearts with heart button on top right
   return (
-    <div className={"relative"} style={{ cursor: "move" }}>
+    <div className={"relative"}>
       {/* image */}
       <img
         className="w-full h-80 object-cover rounded-lg"

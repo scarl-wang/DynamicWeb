@@ -7,3 +7,7 @@ In my project, I wanted to combine the concepts we learned in the in-class excer
 Some tutorials I referenced/found helpful:
 https://www.youtube.com/watch?v=wIyHSOugGGw&list=PLCtjz427uXFnu9XE28sd8tUau1edPe-Ut&index=2
 https://www.youtube.com/watch?v=TtFlO4eRn9Q
+
+### Updates
+
+After the presentation, I learned more about `useContext()` and thought it'd be an helpful addition to my project because of the amount of props I was passing. I restructured my code using `useContext()` and moved my code that manages the shared state across components from `App.js` to `VisionBoardContext()`. I found that this keeps the code cleaner, more manageable, and reduces the risk of missing or incorrectly passed props between parent and child components.
