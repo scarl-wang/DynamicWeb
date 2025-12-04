@@ -1,0 +1,23 @@
+### Get All Projects
+GET http://localhost:3001/projects HTTP/1.1
+Content-Type: application/json
+
+### Create a New Project
+POST http://localhost:3001/projects HTTP/1.1
+Content-Type: application/json
+
+{
+  "title" : "learn REACT"
+}
+
+### Edit an existing project by id
+PUT http://localhost:3001/projects/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title" : "learn REACT"
+}
+
+### Delete an existing project by id
+DELETE http://localhost:3001/projects/1 HTTP/1.1
+Content-Type: application/json
