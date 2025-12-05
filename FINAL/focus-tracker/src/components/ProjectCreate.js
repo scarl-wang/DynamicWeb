@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useProjectContext from "../hooks/use-project-context";
+import Button from "./ui/Button";
 
 const ProjectCreate = ({ onProjectCreated }) => {
   const { createProject } = useProjectContext();
@@ -19,9 +20,15 @@ const ProjectCreate = ({ onProjectCreated }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={title} onChange={handleChange} />
-      <button>New Project</button>
+    <form onSubmit={handleSubmit} className="flex gap-2">
+      <input
+        className="border-2 border-slate-200 rounded-md px-4 py-2"
+        type="text"
+        value={title}
+        onChange={handleChange}
+        placeholder="New project name..."
+      />
+      <Button primary>Add</Button>
     </form>
   );
 };

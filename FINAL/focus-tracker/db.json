@@ -2,15 +2,46 @@
   "projects": [
     {
       "title": "another project",
-      "id": 2
+      "id": 1
     },
     {
-      "title": "start?",
+      "title": "Project Name",
       "id": 4
     },
     {
       "title": "sss",
       "id": 5
+    },
+    {
+      "title": "Dynamic Web Final",
+      "id": 6
+    },
+    {
+      "title": "Final Project",
+      "id": 7
+    }
+  ],
+  "sessions": [
+    {
+      "projectId": 1,
+      "duration": 3600,
+      "notes": "Worked on the final project",
+      "timestamp": "2024-12-04T10:30:00.000Z",
+      "id": 1
+    },
+    {
+      "projectId": 4,
+      "duration": 3566,
+      "notes": "Worked on the final project",
+      "timestamp": "2024-12-04T10:30:00.000Z",
+      "id": 2
+    },
+    {
+      "projectId": 5,
+      "duration": 600,
+      "notes": "",
+      "timestamp": "2025-12-05T03:41:46.484Z",
+      "id": 3
     }
   ]
 }

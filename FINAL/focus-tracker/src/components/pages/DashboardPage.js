@@ -14,10 +14,14 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen p-[72px]">
+    <div className="bg-white min-h-screen p-[40px]">
       <div className="flex items-center justify-between mb-12">
         <h1 className="text-[80px]">This Week</h1>
-        <Button onClick={() => setIsAddingNew(!isAddingNew)} className="gap-2">
+        <Button
+          primary
+          onClick={() => setIsAddingNew(!isAddingNew)}
+          className="gap-2"
+        >
           <Plus className="size-4" />
           Add Project
         </Button>

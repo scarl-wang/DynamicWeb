@@ -1,11 +1,12 @@
-import axios from "axios";
-import Timer from "./components/pages/Timer";
-import Dashboard from "./components/pages/Dashboard";
-
-import Button from "./components/ui/Button";
+import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
 import useProjectContext from "./hooks/use-project-context";
+
+import Navigation from "./components/ui/NavBar";
+import TimerPage from "./components/pages/TimerPage";
+import DashboardPage from "./components/pages/DashboardPage";
+import LogSessionDialog from "./components/pages/LogSessionDialog";
 
 function App() {
   const { fetchProjects } = useProjectContext();
@@ -16,8 +17,13 @@ function App() {
 
   return (
     <div>
-      <Timer />
-      <Dashboard />
+      <Navigation />
+      <Routes>
+        <Route path="" element={<TimerPage />} />
+      </Routes>
+      <Routes>
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
     </div>
   );
 }

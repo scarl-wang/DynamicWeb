@@ -1,15 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { Provider } from "./context/projects";
+import { ProjectsProvider } from "./context/projects";
+import { SessionsProvider } from "./context/sessions";
+import { TimerProvider } from "./context/timer";
+import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <ProjectsProvider>
+        <SessionsProvider>
+          <TimerProvider>
+            <App />
+          </TimerProvider>
+        </SessionsProvider>
+      </ProjectsProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

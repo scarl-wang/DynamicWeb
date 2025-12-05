@@ -21,3 +21,26 @@ Content-Type: application/json
 ### Delete an existing project by id
 DELETE http://localhost:3001/projects/1 HTTP/1.1
 Content-Type: application/json
+
+### Get All Sessions
+GET http://localhost:3001/sessions HTTP/1.1
+Content-Type: application/json
+
+### Get Sessions for a Specific Project
+GET http://localhost:3001/sessions?projectId=1 HTTP/1.1
+Content-Type: application/json
+
+### Create a New Session
+POST http://localhost:3001/sessions HTTP/1.1
+Content-Type: application/json
+
+{
+  "projectId": 4,
+  "duration": 3566,
+  "notes": "Worked on the final project",
+  "timestamp": "2024-12-04T10:30:00.000Z"
+}
+
+### Delete a Session by id
+DELETE http://localhost:3001/sessions/1 HTTP/1.1
+Content-Type: application/json

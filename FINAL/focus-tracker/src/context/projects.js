@@ -3,7 +3,7 @@ import axios from "axios";
 
 const ProjectsContext = createContext();
 
-const Provider = ({ children }) => {
+const ProjectsProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
 
   const fetchProjects = useCallback(async () => {
@@ -63,5 +63,5 @@ const Provider = ({ children }) => {
   );
 };
 
-export { Provider };
+export { ProjectsProvider };
 export default ProjectsContext;
