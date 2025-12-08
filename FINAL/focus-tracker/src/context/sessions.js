@@ -19,7 +19,7 @@ const SessionsProvider = ({ children }) => {
 
   const createSession = useCallback(async (projectId, duration, notes) => {
     const response = await axios.post("http://localhost:3001/sessions", {
-      projectId: Number(projectId),
+      projectId,
       duration, // seconds
       notes: notes || "", // optional note
       timestamp: new Date().toISOString(),
@@ -32,9 +32,7 @@ const SessionsProvider = ({ children }) => {
   // getting all sessions for one specific project
   const fetchProjectSessions = useCallback(
     (projectId) => {
-      return sessions.filter(
-        (session) => Number(session.projectId) === Number(projectId)
-      );
+      return sessions.filter((session) => session.projectId === projectId);
     },
     [sessions]
   );

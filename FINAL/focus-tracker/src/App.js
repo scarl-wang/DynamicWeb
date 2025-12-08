@@ -20,8 +20,6 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="" element={<TimerPage />} />
-      </Routes>
-      <Routes>
         <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
     </div>

@@ -29,25 +29,25 @@ const ProjectItem = ({ project }) => {
   };
 
   return (
-    <div className="border-2 border-slate-800 p-4 h-40 hover:shadow-lg transition-shadow">
+    <div className="border border-stone-500 p-2 h-[300px] hover:shadow-lg transition-shadow">
       {showEdit ? (
         <ProjectEdit
-          className="col-1"
+          className="col-1 h-full flex flex-col"
           project={project}
           onSubmit={handleSubmit}
         />
       ) : (
         <div className="h-full flex flex-col justify-between">
-          <div className="w-full flex items-start">
-            <h3 className="text-xl font-semibold flex-1 mr-2">
+          <div className="w-full flex item-start">
+            <h3 className="flex-1 text-[40px] text-stone-900 mr-2">
               {project.title}
             </h3>
             <button className="p-2" onClick={handleEdit}>
-              <Pencil className="size-3" />
+              <Pencil className="size-4" />
             </button>
           </div>
 
-          <h3 className="text-xl font-semibold">{totalTime}</h3>
+          <h1 className="text-[60px] text-stone-900">{totalTime}</h1>
         </div>
       )}
     </div>

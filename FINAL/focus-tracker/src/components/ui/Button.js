@@ -8,13 +8,15 @@ const Button = (props) => {
   // building the classname string with cx (combines regular strings with conditional classes)
   const classes = cx(
     // base class that every button gets
-    "inline-flex items-center justify-center px-4 py-2 rounded-md  transition-all disabled:opacity-50 disabled:cursor-not-allowed",
+    "inline-flex items-center justify-center px-4 py-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed",
     otherProps.className,
     {
       // conditional classes based on which variant prop is true
-      "bg-black font-medium text-white hover:bg-gray-700": primary,
-      "bg-red-600 font-medium text-white hover:bg-red-700": warning,
-      "border border-black px-2 py-1 font-regular text-black hover:bg-slae-100":
+      "bg-stone-900 border border-transparent font-normal text-white hover:bg-stone-800":
+        primary,
+      "bg-red-600 border border-transparent font-normal text-white hover:bg-red-700":
+        warning,
+      "border border-stone-900 font-medium text-stone-900 hover:bg-stone-100":
         secondary,
     }
   );

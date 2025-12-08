@@ -14,9 +14,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen p-[40px]">
+    <div className="bg-stone-100 min-h-screen p-[20px]">
       <div className="flex items-center justify-between mb-12">
-        <h1 className="text-[80px]">This Week</h1>
+        <h1 className="text-[100px] text-stone-900">THIS WEEK</h1>
         <Button
           primary
           onClick={() => setIsAddingNew(!isAddingNew)}

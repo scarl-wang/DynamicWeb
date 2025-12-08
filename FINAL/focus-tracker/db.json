@@ -1,24 +1,24 @@
 {
   "projects": [
     {
-      "title": "another project",
-      "id": 1
+      "title": "Study",
+      "id": "1"
     },
     {
-      "title": "Project Name",
-      "id": 4
-    },
-    {
-      "title": "sss",
-      "id": 5
+      "title": "Read",
+      "id": "4"
     },
     {
       "title": "Dynamic Web Final",
-      "id": 6
+      "id": "L5AfJc7"
     },
     {
-      "title": "Final Project",
-      "id": 7
+      "title": "Random",
+      "id": "oyTnI1c"
+    },
+    {
+      "title": "Learn React",
+      "id": "Y7SPUF4"
     }
   ],
   "sessions": [
@@ -27,21 +27,77 @@
       "duration": 3600,
       "notes": "Worked on the final project",
       "timestamp": "2024-12-04T10:30:00.000Z",
-      "id": 1
+      "id": "1"
     },
     {
       "projectId": 4,
       "duration": 3566,
       "notes": "Worked on the final project",
       "timestamp": "2024-12-04T10:30:00.000Z",
-      "id": 2
+      "id": "2"
     },
     {
       "projectId": 5,
       "duration": 600,
       "notes": "",
       "timestamp": "2025-12-05T03:41:46.484Z",
-      "id": 3
+      "id": "3"
+    },
+    {
+      "projectId": 5,
+      "duration": 7,
+      "notes": "Test",
+      "timestamp": "2025-12-05T04:25:58.728Z",
+      "id": "ti5RdP3"
+    },
+    {
+      "projectId": null,
+      "duration": 5,
+      "notes": "",
+      "timestamp": "2025-12-05T04:31:12.665Z",
+      "id": "xxlIWw9"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 3,
+      "notes": "",
+      "timestamp": "2025-12-05T04:33:45.858Z",
+      "id": "hOCG9D4"
+    },
+    {
+      "projectId": "oyTnI1c",
+      "duration": 7,
+      "notes": "",
+      "timestamp": "2025-12-05T04:34:07.241Z",
+      "id": "w0IhwTi"
+    },
+    {
+      "projectId": "oyTnI1c",
+      "duration": 492,
+      "notes": "",
+      "timestamp": "2025-12-05T04:34:34.424Z",
+      "id": "7qaE3bW"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 212,
+      "notes": "",
+      "timestamp": "2025-12-05T19:50:20.702Z",
+      "id": "-yhqcrx"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 44,
+      "notes": "Styling",
+      "timestamp": "2025-12-07T05:48:30.923Z",
+      "id": "zf5IzfL"
+    },
+    {
+      "projectId": "Y7SPUF4",
+      "duration": 1,
+      "notes": "",
+      "timestamp": "2025-12-08T02:48:29.046Z",
+      "id": "bXwsRuz"
     }
   ]
 }

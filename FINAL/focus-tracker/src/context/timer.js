@@ -69,20 +69,24 @@ const TimerProvider = ({ children }) => {
     setSessionDuration(0);
   };
 
-  // format time to display
+  // format time to display 00:00 or 00:00:00
   const formatTime = (seconds) => {
     // convert seconds to hh:mm:ss
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
 
-    // only dispay hour/min if they are >0
+    // pad numbers to always be 2 digits
+    const paddedMinutes = minutes.toString().padStart(2, "0");
+    const paddedSecs = secs.toString().padStart(2, "0");
+    const paddedHours = hours.toString().padStart(2, "0");
+
+    // only display hours if > 0
     if (hours > 0) {
-      return `${hours}h ${minutes}m ${secs}s`;
-    } else if (minutes > 0) {
-      return `${minutes}m ${secs}s`;
+      return `${paddedHours}:${paddedMinutes}:${paddedSecs}`;
     }
-    return `${secs}s`;
+
+    return `${paddedMinutes}:${paddedSecs}`;
   };
 
   const valuesToShare = {

@@ -15,7 +15,7 @@ const ProjectEdit = ({ project, onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="w-full border-2 border-slate-200 rounded-md px-4 py-2"
+        className="w-full border-2 border-stone-200 bg-stone-100 text-stone-900 px-4 py-2"
         type="text"
         onChange={handleChange}
         value={title}

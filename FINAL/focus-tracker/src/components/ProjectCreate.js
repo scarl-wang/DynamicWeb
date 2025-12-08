@@ -22,7 +22,7 @@ const ProjectCreate = ({ onProjectCreated }) => {
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
       <input
-        className="border-2 border-slate-200 rounded-md px-4 py-2"
+        className="border-2 border-stone-200 bg-stone-100 text-stone-900 px-4 py-2"
         type="text"
         value={title}
         onChange={handleChange}

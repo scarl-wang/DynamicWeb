@@ -12,6 +12,10 @@ function LogSessionDialog({ open, onComplete, duration, onCancel }) {
   const [notes, setNotes] = useState("");
 
   const handleSave = () => {
+    console.log("=== SAVE CLICKED ===");
+    console.log("selectedProject:", selectedProject);
+    console.log("duration:", duration);
+    console.log("notes:", notes);
     if (selectedProject) {
       // save the session to context
       createSession(selectedProject, duration, notes);
@@ -35,10 +39,8 @@ function LogSessionDialog({ open, onComplete, duration, onCancel }) {
   };
 
   if (!open) {
-    console.log("Dialog closed, returning null");
     return null;
   }
-  console.log("Dialog is OPEN with duration:", duration);
 
   return (
     <div className="fixed inset-0 z-10 flex items-center justify-center">
@@ -46,7 +48,7 @@ function LogSessionDialog({ open, onComplete, duration, onCancel }) {
       <div className="fixed inset-0 bg-black/50" onClick={handleCancel} />
 
       {/* dialog content */}
-      <div className="relative bg-white rounded-lg shadow-lg max-w-[1026px] w-full mx-4 p-[57px] z-50">
+      <div className="relative bg-stone-100 shadow-lg max-w-[1026px] w-full mx-4 p-[57px] z-50">
         <button
           onClick={handleCancel}
           className="absolute top-4 right-4 hover:opacity-70 transition-opacity"
@@ -56,7 +58,7 @@ function LogSessionDialog({ open, onComplete, duration, onCancel }) {
 
         {/* content */}
         <div>
-          <h2 className="text-2xl font-semibold mb-8">What did you work on?</h2>
+          <h1 className="text-[80px] mb-8">What did you work on?</h1>
 
           <div>
             <ProjectSelect
@@ -67,7 +69,7 @@ function LogSessionDialog({ open, onComplete, duration, onCancel }) {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Describe what you worked on..."
-              className="w-full min-h-[120px] mt-4 border-2 border-black rounded-md p-4 resize-none"
+              className="w-full min-h-[120px] bg-stone-100 mt-4 border-2 border-stone-900 p-2 resize-none"
             />
           </div>
 
