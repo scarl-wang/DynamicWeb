@@ -20,6 +20,8 @@ const ProjectsProvider = ({ children }) => {
 
     const updatedProjects = [response.data, ...projects];
     setProjects(updatedProjects);
+
+    return response.data; // return the new project
   };
 
   const deleteProjectById = async (id) => {

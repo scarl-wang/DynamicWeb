@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const baseClass =
-    "flex justify-center px-4 py-2 w-[120px] border border-stone-900 transition-colors hover:bg-stone-100";
+    "flex justify-center px-4 py-2 w-[120px] border border-stone-900 transition-colors hover:bg-stone-200";
   const activeClass =
     "flex justify-center px-4 py-2 w-[120px] border border-stone-900 bg-stone-900 text-white";
   return (

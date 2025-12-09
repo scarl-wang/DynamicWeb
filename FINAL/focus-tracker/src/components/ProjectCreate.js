@@ -11,12 +11,16 @@ const ProjectCreate = ({ onProjectCreated }) => {
     setTitle(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    createProject(title);
+    const newProject = await createProject(title);
+
     setTitle("");
 
-    onProjectCreated(); // hide the form once it's entered
+    // pass the actual project object, not just the title
+    if (onProjectCreated) {
+      onProjectCreated(newProject);
+    }
   };
 
   return (

@@ -3,10 +3,9 @@ import { useEffect } from "react";
 
 import useProjectContext from "./hooks/use-project-context";
 
-import Navigation from "./components/ui/NavBar";
+import NavBar from "./components/ui/NavBar";
 import TimerPage from "./components/pages/TimerPage";
 import DashboardPage from "./components/pages/DashboardPage";
-import LogSessionDialog from "./components/pages/LogSessionDialog";
 
 function App() {
   const { fetchProjects } = useProjectContext();
@@ -17,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <Navigation />
+      <NavBar />
       <Routes>
         <Route path="" element={<TimerPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />

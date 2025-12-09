@@ -32,7 +32,10 @@ const SessionsProvider = ({ children }) => {
   // getting all sessions for one specific project
   const fetchProjectSessions = useCallback(
     (projectId) => {
-      return sessions.filter((session) => session.projectId === projectId);
+      return sessions.filter(
+        // prevent type mismatch
+        (session) => String(session.projectId) === String(projectId)
+      );
     },
     [sessions]
   );
@@ -42,15 +45,38 @@ const SessionsProvider = ({ children }) => {
     (projectId) => {
       // calling fetchProjectSession to get all filtered sessions
       const projectSessions = fetchProjectSessions(projectId);
+
       // using the reduce() method to sum up all duration
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-      return projectSessions.reduce(
-        (total, session) => total + session.duration,
-        0
-      );
+      const total = projectSessions.reduce((total, session) => {
+        return total + (Number(session.duration) || 0); // Convert to number and default to 0
+      }, 0);
+
+      return total;
     },
     [fetchProjectSessions]
   );
+
+  // deleting all the sessions under a project
+  const deleteSessionsByProjectId = async (projectId) => {
+    // get all sessions for this project (convert both to strings for comparison)
+    const sessionsToDelete = sessions.filter(
+      (session) => String(session.projectId) === String(projectId)
+    );
+
+    // delete each session from the database
+    await Promise.all(
+      sessionsToDelete.map((session) => {
+        return axios.delete(`http://localhost:3001/sessions/${session.id}`);
+      })
+    );
+
+    // update local state to remove these sessions
+    const updatedSessions = sessions.filter(
+      (session) => String(session.projectId) !== String(projectId)
+    );
+    setSessions(updatedSessions);
+  };
 
   const valuesToShare = {
     sessions,
@@ -58,6 +84,7 @@ const SessionsProvider = ({ children }) => {
     createSession,
     fetchProjectSessions,
     getTotalProjectTime,
+    deleteSessionsByProjectId,
   };
   return (
     <SessionsContext.Provider value={valuesToShare}>

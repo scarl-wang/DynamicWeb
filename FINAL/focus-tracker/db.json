@@ -13,7 +13,7 @@
       "id": "L5AfJc7"
     },
     {
-      "title": "Random",
+      "title": "Idk",
       "id": "oyTnI1c"
     },
     {
@@ -22,41 +22,6 @@
     }
   ],
   "sessions": [
-    {
-      "projectId": 1,
-      "duration": 3600,
-      "notes": "Worked on the final project",
-      "timestamp": "2024-12-04T10:30:00.000Z",
-      "id": "1"
-    },
-    {
-      "projectId": 4,
-      "duration": 3566,
-      "notes": "Worked on the final project",
-      "timestamp": "2024-12-04T10:30:00.000Z",
-      "id": "2"
-    },
-    {
-      "projectId": 5,
-      "duration": 600,
-      "notes": "",
-      "timestamp": "2025-12-05T03:41:46.484Z",
-      "id": "3"
-    },
-    {
-      "projectId": 5,
-      "duration": 7,
-      "notes": "Test",
-      "timestamp": "2025-12-05T04:25:58.728Z",
-      "id": "ti5RdP3"
-    },
-    {
-      "projectId": null,
-      "duration": 5,
-      "notes": "",
-      "timestamp": "2025-12-05T04:31:12.665Z",
-      "id": "xxlIWw9"
-    },
     {
       "projectId": "L5AfJc7",
       "duration": 3,
@@ -98,6 +63,76 @@
       "notes": "",
       "timestamp": "2025-12-08T02:48:29.046Z",
       "id": "bXwsRuz"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 4,
+      "notes": "timer",
+      "timestamp": "2025-12-08T03:27:09.456Z",
+      "id": "x1Ulsif"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 4,
+      "notes": "",
+      "timestamp": "2025-12-08T04:23:01.168Z",
+      "id": "xO7ijvV"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 4,
+      "notes": "",
+      "timestamp": "2025-12-08T04:25:08.211Z",
+      "id": "j2yrlUK"
+    },
+    {
+      "projectId": "1",
+      "duration": 2,
+      "notes": "",
+      "timestamp": "2025-12-08T04:25:56.577Z",
+      "id": "p5C_Mda"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 4,
+      "notes": "",
+      "timestamp": "2025-12-08T04:31:59.447Z",
+      "id": "oCI4lzQ"
+    },
+    {
+      "projectId": "4",
+      "duration": 3,
+      "notes": "",
+      "timestamp": "2025-12-08T04:47:28.209Z",
+      "id": "0cuhD_v"
+    },
+    {
+      "projectId": "4",
+      "duration": 0,
+      "notes": "",
+      "timestamp": "2025-12-08T04:48:38.021Z",
+      "id": "pCuVtVm"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 354,
+      "notes": "",
+      "timestamp": "2025-12-09T03:26:47.635Z",
+      "id": "byaajTI"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 3,
+      "notes": "kjk",
+      "timestamp": "2025-12-09T15:05:50.631Z",
+      "id": "OCVJvB1"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 1,
+      "notes": "",
+      "timestamp": "2025-12-09T16:06:52.695Z",
+      "id": "NSYYVaS"
     }
   ]
 }
