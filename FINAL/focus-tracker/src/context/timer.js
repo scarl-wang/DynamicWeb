@@ -40,15 +40,11 @@ const TimerProvider = ({ children }) => {
   };
 
   const stopTimer = () => {
-    console.log("stopTimer called - elapsedTime:", elapsedTime);
-
     setIsRunning(false);
     // save the duration before resetting
     setSessionDuration(elapsedTime);
     // show dialog
     setShowDialog(true);
-
-    console.log("After setting sessionDuration to:", elapsedTime);
   };
 
   const pauseTimer = () => {

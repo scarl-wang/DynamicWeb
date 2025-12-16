@@ -1,24 +1,20 @@
 {
   "projects": [
     {
-      "title": "Study",
-      "id": "1"
-    },
-    {
       "title": "Read",
       "id": "4"
     },
     {
-      "title": "Dynamic Web Final",
+      "title": "Dynamic Web Final xxx",
       "id": "L5AfJc7"
-    },
-    {
-      "title": "Idk",
-      "id": "oyTnI1c"
     },
     {
       "title": "Learn React",
       "id": "Y7SPUF4"
+    },
+    {
+      "title": "New Project",
+      "id": "XfArZZo"
     }
   ],
   "sessions": [
@@ -28,20 +24,6 @@
       "notes": "",
       "timestamp": "2025-12-05T04:33:45.858Z",
       "id": "hOCG9D4"
-    },
-    {
-      "projectId": "oyTnI1c",
-      "duration": 7,
-      "notes": "",
-      "timestamp": "2025-12-05T04:34:07.241Z",
-      "id": "w0IhwTi"
-    },
-    {
-      "projectId": "oyTnI1c",
-      "duration": 492,
-      "notes": "",
-      "timestamp": "2025-12-05T04:34:34.424Z",
-      "id": "7qaE3bW"
     },
     {
       "projectId": "L5AfJc7",
@@ -86,13 +68,6 @@
       "id": "j2yrlUK"
     },
     {
-      "projectId": "1",
-      "duration": 2,
-      "notes": "",
-      "timestamp": "2025-12-08T04:25:56.577Z",
-      "id": "p5C_Mda"
-    },
-    {
       "projectId": "L5AfJc7",
       "duration": 4,
       "notes": "",
@@ -133,6 +108,20 @@
       "notes": "",
       "timestamp": "2025-12-09T16:06:52.695Z",
       "id": "NSYYVaS"
+    },
+    {
+      "projectId": "4",
+      "duration": 11,
+      "notes": "Read 10 pages",
+      "timestamp": "2025-12-09T17:13:20.340Z",
+      "id": "Fe2gPq0"
+    },
+    {
+      "projectId": "L5AfJc7",
+      "duration": 66,
+      "notes": "alsdjflksad",
+      "timestamp": "2025-12-09T19:40:53.816Z",
+      "id": "0x6oEH6"
     }
   ]
 }

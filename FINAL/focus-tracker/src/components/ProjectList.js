@@ -2,15 +2,15 @@ import useProjectContext from "../hooks/use-project-context";
 import useSessionContext from "../hooks/use-sessions-context";
 import ProjectItem from "./ProjectItem";
 
-// color palette: dark green (most time) to yellow (least time)
+// color palette: dark green to yellow
 const projectColors = [
-  "bg-lime-900", // green - most time invested
+  "bg-lime-900",
   "bg-lime-800",
   "bg-lime-700",
   "bg-lime-600",
   "bg-lime-500",
   "bg-yellow-500",
-  "bg-yellow-400", // yellow - least time invested
+  "bg-yellow-400",
 ];
 
 const ProjectList = () => {
