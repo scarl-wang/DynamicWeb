@@ -1,91 +1,117 @@
-import { createContext, useState, useEffect, useCallback } from "react";
+import { createContext, useCallback } from "react";
 import axios from "axios";
+import useProjectContext from "../hooks/use-project-context";
 
 const SessionsContext = createContext();
 
 const SessionsProvider = ({ children }) => {
-  const [sessions, setSessions] = useState([]);
+  // get projects and update function from projects context
+  const { projects, setProjects } = useProjectContext();
 
-  // fetch all data from backend when component mounts
-  useEffect(() => {
-    fetchSessions();
-  }, []); // empty array: run once on mount
+  // create a new session for a project
+  const createSession = useCallback(
+    async (projectId, duration, notes) => {
+      // find the project by id
+      const project = projects.find((p) => String(p.id) === String(projectId));
 
-  // get all sessions from the backend
-  const fetchSessions = useCallback(async () => {
-    const response = await axios.get("http://localhost:3001/sessions");
-    setSessions(response.data);
-  }, []);
+      if (!project) {
+        return; // stop if project doesn't exist
+      }
 
-  const createSession = useCallback(async (projectId, duration, notes) => {
-    const response = await axios.post("http://localhost:3001/sessions", {
-      projectId,
-      duration, // seconds
-      notes: notes || "", // optional note
-      timestamp: new Date().toISOString(),
-    });
+      // create the new session object
+      const newSession = {
+        id: Date.now().toString(), // generate session id separately with timestamp
+        duration,
+        notes: notes || "",
+        timestamp: new Date().toISOString(),
+      };
 
-    // use function update to avoid stale closure
-    setSessions((prevSessions) => [response.data, ...prevSessions]);
-  }, []);
+      // add session to project's sessions array
+      const updatedSessions = [newSession, ...(project.sessions || [])];
 
-  // getting all sessions for one specific project
-  const fetchProjectSessions = useCallback(
-    (projectId) => {
-      return sessions.filter(
-        // prevent type mismatch
-        (session) => String(session.projectId) === String(projectId)
+      // update the project in the database
+      const response = await axios.put(
+        `http://localhost:3001/projects/${projectId}`,
+        {
+          ...project,
+          sessions: updatedSessions, // replace sessions with updated array
+        }
       );
+
+      // update local state so the UI refreshes
+      const updatedProjects = projects.map((project) => {
+        if (String(project.id) === String(projectId)) {
+          return response.data; // use the updated project from the server
+        }
+        return project; // keep other projects unchanged
+      });
+
+      setProjects(updatedProjects);
+      return newSession;
     },
-    [sessions]
+    [projects, setProjects]
   );
 
-  // calculating total time for a project
+  // get all sessions for a specific project
+  const fetchProjectSessions = useCallback(
+    (projectId) => {
+      const project = projects.find((p) => String(p.id) === String(projectId));
+      return project?.sessions || []; // return empty array if project doesn't exist or session is undefined
+    },
+    [projects, setProjects]
+  );
+
+  // calculate total time for a project
   const getTotalProjectTime = useCallback(
     (projectId) => {
-      // calling fetchProjectSession to get all filtered sessions
       const projectSessions = fetchProjectSessions(projectId);
-
-      // using the reduce() method to sum up all duration
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-      const total = projectSessions.reduce((total, session) => {
-        return total + (Number(session.duration) || 0); // Convert to number and default to 0
-      }, 0);
+      // add up all the durations using reduce()
+      const total = projectSessions.reduce((sum, session) => {
+        return sum + (Number(session.duration) || 0); // use 0 to handle undefined
+      }, 0); // 0 is the starting value for sum
 
       return total;
     },
     [fetchProjectSessions]
   );
 
-  // deleting all the sessions under a project
-  const deleteSessionsByProjectId = async (projectId) => {
-    // get all sessions for this project (convert both to strings for comparison)
-    const sessionsToDelete = sessions.filter(
-      (session) => String(session.projectId) === String(projectId)
-    );
+  // delete all sessions for a project
+  const deleteSessionsByProjectId = useCallback(
+    async (projectId) => {
+      // find the project
+      const project = projects.find((p) => String(p.id) === String(projectId));
 
-    // delete each session from the database
-    await Promise.all(
-      sessionsToDelete.map((session) => {
-        return axios.delete(`http://localhost:3001/sessions/${session.id}`);
-      })
-    );
+      if (!project) return;
 
-    // update local state to remove these sessions
-    const updatedSessions = sessions.filter(
-      (session) => String(session.projectId) !== String(projectId)
-    );
-    setSessions(updatedSessions);
-  };
+      // update the project with an empty sessions array
+      const response = await axios.put(
+        `http://localhost:3001/projects/${projectId}`,
+        {
+          ...project,
+          sessions: [], // clear all sessions
+        }
+      );
+
+      // update local state
+      const updatedProjects = projects.map((project) => {
+        if (String(project.id) === String(projectId)) {
+          return response.data;
+        }
+        return project;
+      });
+
+      setProjects(updatedProjects);
+    },
+    [projects, setProjects]
+  );
 
   const valuesToShare = {
-    sessions,
-    fetchSessions,
     createSession,
     fetchProjectSessions,
     getTotalProjectTime,
     deleteSessionsByProjectId,
   };
+
   return (
     <SessionsContext.Provider value={valuesToShare}>
       {children}

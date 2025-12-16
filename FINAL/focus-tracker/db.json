@@ -2,126 +2,127 @@
   "projects": [
     {
       "title": "Read",
-      "id": "4"
+      "id": "4",
+      "sessions": [
+        {
+          "id": "0cuhD_v",
+          "duration": 3,
+          "notes": "",
+          "timestamp": "2025-12-08T04:47:28.209Z"
+        },
+        {
+          "id": "pCuVtVm",
+          "duration": 0,
+          "notes": "",
+          "timestamp": "2025-12-08T04:48:38.021Z"
+        },
+        {
+          "id": "Fe2gPq0",
+          "duration": 11,
+          "notes": "Read 10 pages",
+          "timestamp": "2025-12-09T17:13:20.340Z"
+        }
+      ]
     },
     {
-      "title": "Dynamic Web Final xxx",
+      "title": "Dynamic Web Final",
+      "sessions": [
+        {
+          "id": "1765893280055",
+          "duration": 71,
+          "notes": "",
+          "timestamp": "2025-12-16T13:54:40.055Z"
+        },
+        {
+          "id": "hOCG9D4",
+          "duration": 3,
+          "notes": "",
+          "timestamp": "2025-12-05T04:33:45.858Z"
+        },
+        {
+          "id": "-yhqcrx",
+          "duration": 212,
+          "notes": "",
+          "timestamp": "2025-12-05T19:50:20.702Z"
+        },
+        {
+          "id": "zf5IzfL",
+          "duration": 44,
+          "notes": "Styling",
+          "timestamp": "2025-12-07T05:48:30.923Z"
+        },
+        {
+          "id": "x1Ulsif",
+          "duration": 4,
+          "notes": "timer",
+          "timestamp": "2025-12-08T03:27:09.456Z"
+        },
+        {
+          "id": "xO7ijvV",
+          "duration": 4,
+          "notes": "",
+          "timestamp": "2025-12-08T04:23:01.168Z"
+        },
+        {
+          "id": "j2yrlUK",
+          "duration": 4,
+          "notes": "",
+          "timestamp": "2025-12-08T04:25:08.211Z"
+        },
+        {
+          "id": "oCI4lzQ",
+          "duration": 4,
+          "notes": "",
+          "timestamp": "2025-12-08T04:31:59.447Z"
+        },
+        {
+          "id": "byaajTI",
+          "duration": 354,
+          "notes": "",
+          "timestamp": "2025-12-09T03:26:47.635Z"
+        },
+        {
+          "id": "OCVJvB1",
+          "duration": 3,
+          "notes": "kjk",
+          "timestamp": "2025-12-09T15:05:50.631Z"
+        },
+        {
+          "id": "NSYYVaS",
+          "duration": 1,
+          "notes": "",
+          "timestamp": "2025-12-09T16:06:52.695Z"
+        },
+        {
+          "id": "0x6oEH6",
+          "duration": 66,
+          "notes": "alsdjflksad",
+          "timestamp": "2025-12-09T19:40:53.816Z"
+        }
+      ],
       "id": "L5AfJc7"
     },
     {
       "title": "Learn React",
-      "id": "Y7SPUF4"
+      "id": "Y7SPUF4",
+      "sessions": [
+        {
+          "id": "bXwsRuz",
+          "duration": 1,
+          "notes": "",
+          "timestamp": "2025-12-08T02:48:29.046Z"
+        }
+      ]
     },
     {
       "title": "New Project",
-      "id": "XfArZZo"
-    }
-  ],
-  "sessions": [
-    {
-      "projectId": "L5AfJc7",
-      "duration": 3,
-      "notes": "",
-      "timestamp": "2025-12-05T04:33:45.858Z",
-      "id": "hOCG9D4"
+      "id": "XfArZZo",
+      "sessions": []
     },
     {
-      "projectId": "L5AfJc7",
-      "duration": 212,
-      "notes": "",
-      "timestamp": "2025-12-05T19:50:20.702Z",
-      "id": "-yhqcrx"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 44,
-      "notes": "Styling",
-      "timestamp": "2025-12-07T05:48:30.923Z",
-      "id": "zf5IzfL"
-    },
-    {
-      "projectId": "Y7SPUF4",
-      "duration": 1,
-      "notes": "",
-      "timestamp": "2025-12-08T02:48:29.046Z",
-      "id": "bXwsRuz"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 4,
-      "notes": "timer",
-      "timestamp": "2025-12-08T03:27:09.456Z",
-      "id": "x1Ulsif"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 4,
-      "notes": "",
-      "timestamp": "2025-12-08T04:23:01.168Z",
-      "id": "xO7ijvV"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 4,
-      "notes": "",
-      "timestamp": "2025-12-08T04:25:08.211Z",
-      "id": "j2yrlUK"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 4,
-      "notes": "",
-      "timestamp": "2025-12-08T04:31:59.447Z",
-      "id": "oCI4lzQ"
-    },
-    {
-      "projectId": "4",
-      "duration": 3,
-      "notes": "",
-      "timestamp": "2025-12-08T04:47:28.209Z",
-      "id": "0cuhD_v"
-    },
-    {
-      "projectId": "4",
-      "duration": 0,
-      "notes": "",
-      "timestamp": "2025-12-08T04:48:38.021Z",
-      "id": "pCuVtVm"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 354,
-      "notes": "",
-      "timestamp": "2025-12-09T03:26:47.635Z",
-      "id": "byaajTI"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 3,
-      "notes": "kjk",
-      "timestamp": "2025-12-09T15:05:50.631Z",
-      "id": "OCVJvB1"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 1,
-      "notes": "",
-      "timestamp": "2025-12-09T16:06:52.695Z",
-      "id": "NSYYVaS"
-    },
-    {
-      "projectId": "4",
-      "duration": 11,
-      "notes": "Read 10 pages",
-      "timestamp": "2025-12-09T17:13:20.340Z",
-      "id": "Fe2gPq0"
-    },
-    {
-      "projectId": "L5AfJc7",
-      "duration": 66,
-      "notes": "alsdjflksad",
-      "timestamp": "2025-12-09T19:40:53.816Z",
-      "id": "0x6oEH6"
+      "title": "New",
+      "sessions": [],
+      "id": "w7MtT2I"
     }
   ]
 }
